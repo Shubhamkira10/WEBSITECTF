@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        @keyframes typing {
+            0% { width: 0% }
+            100% { width: 100% }
+        }
+
+        @keyframes blink {
+            50% { border-right: 2px solid transparent; }
+        }
+
+        @keyframes glitch {
+            0% { transform: skew(0deg); opacity: 1; }
+            20% { transform: skew(-5deg); opacity: 0.8; }
+            40% { transform: skew(5deg); opacity: 1; }
+            60% { transform: skew(-3deg); opacity: 0.9; }
+            80% { transform: skew(3deg); opacity: 1; }
+            100% { transform: skew(0deg); opacity: 1; }
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: black;
+            color: #00ff00;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .login-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px #00ff00;
+            width: 320px;
+            text-align: center;
+        }
+
+        .hacker-title {
+            font-size: 22px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #00ff00;
+            display: inline-block;
+            animation: typing 2s steps(22, end), blink 0.8s infinite;
+        }
+
+        input {
+            background: black;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            padding: 10px;
+            width: 90%;
+            font-size: 16px;
+            text-align: center;
+            display: block;
+            margin: 10px auto;
+            outline: none;
+            box-shadow: 0px 0px 10px #00ff00;
+        }
+
+        input::placeholder {
+            color: #00ff00;
+            opacity: 0.6;
+        }
+
+        button {
+            background: black;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0px 0px 15px #00ff00;
+        }
+
+        button:hover {
+            background: #00ff00;
+            color: black;
+            font-weight: bold;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+            font-size: 14px;
+            text-shadow: 0px 0px 5px red;
+            animation: glitch 0.3s infinite;
+        }
+
+        /* Background flickering code */
+        .hacker-code {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 14px;
+            color: rgba(0, 255, 0, 0.2);
+            font-family: 'Courier New', monospace;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="hacker-code" id="hacker-code"></div>
+
+    <div class="login-container">
+        <h2 class="hacker-title">ACCESS REQUIRED</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="checkLogin()">Authenticate Nimbu</button>
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script>
+        function checkLogin() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const correctUsername = "nimit{level0}";
+            const correctPassword = "nimit{level0}";
+
+            if (username === correctUsername && password === correctPassword) {
+                window.location.href = "level0/level0.html"; 
+            } else {
+                document.getElementById("errorMessage").textContent = "ACCESS DENIED!";
+    }
+}
+
+        function generateRandomCode() {
+            let code = "";
+            const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&*@!";
+            for (let i = 0; i < 2000; i++) {
+                code += chars.charAt(Math.floor(Math.random() * chars.length));
+                if (i % 80 === 0) code += "<br>";
+            }
+            document.getElementById("hacker-code").innerHTML = code;
+        }
+
+        setInterval(generateRandomCode, 200);
+    </script>
+
+</body>
+</html>
