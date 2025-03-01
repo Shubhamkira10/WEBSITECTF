@@ -3,3 +3,6 @@ it's not properly based on  web penetration testing but a fun game to play.
 
 UserName: nimit{level0}
 Password: nimit{level0}
+
+
+https://shubhamkira10.github.io/WEBSITECTF/gamectf/index.html
