@@ -25,7 +25,7 @@ function goToNextLevel() {
     window.location.href = "../level9/level9.html"; 
 }
 
-const correctPassword = "nimit{WELOVEYOU}";
+const correctPassword = "gdgusar{level8}";
 
 function requestPassword() {
     let enteredPassword = prompt("Enter the password to access Level :");
@@ -37,5 +37,6 @@ function requestPassword() {
         window.location.href = "../index.html"; 
     }
 }
+
 
 window.onload = requestPassword;
