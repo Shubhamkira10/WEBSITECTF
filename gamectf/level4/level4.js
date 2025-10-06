@@ -81,7 +81,7 @@ function goToNextLevel() {
 
 
 window.onload = requestPassword;
-        const correctPassword = "nimit{video}";
+        const correctPassword = "gdgusar{level4}";
 
         function requestPassword() {
             let enteredPassword = prompt("Enter the password to access Level :");
@@ -95,4 +95,5 @@ window.onload = requestPassword;
         }
 
         window.onload = requestPassword;
+
 
