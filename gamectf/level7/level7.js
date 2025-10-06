@@ -25,7 +25,7 @@ function goToNextLevel() {
     window.location.href = "../level8/level8.html"; 
 }
 
-const correctPassword = "nimit{detective}";
+const correctPassword = "gdgusar{level7}";
 
 function requestPassword() {
     let enteredPassword = prompt("Enter the password to access Level :");
@@ -53,3 +53,4 @@ if (userLocation.includes(secret)) {
 } else {  
     console.warn("DORA THE EXPLORERS");  
 }
+
