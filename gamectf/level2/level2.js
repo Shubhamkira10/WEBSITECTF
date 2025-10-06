@@ -42,7 +42,7 @@ const allowedLetters = ["1","0"];
         }
 
 
-        const correctPassword = "nimit{yehToEasyTha}";
+        const correctPassword = "gdgusar{level2}";
 
         function requestPassword() {
             let enteredPassword = prompt("Enter the password to access Level :");
@@ -56,4 +56,5 @@ const allowedLetters = ["1","0"];
         }
 
         window.onload = requestPassword;
+
 
