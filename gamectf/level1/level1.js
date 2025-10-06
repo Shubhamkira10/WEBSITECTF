@@ -31,7 +31,7 @@ const allowedLetters = ["1","0"];
             window.location.href = "../level2/level2.html"; 
         }
 
-        const correctPassword = "nimit{kaisaThaYehLevel}";
+        const correctPassword = "gdgusar{level1}";
 
         function requestPassword() {
             let enteredPassword = prompt("Enter the password to access Level 1:");
@@ -43,5 +43,6 @@ const allowedLetters = ["1","0"];
                 window.location.href = "../index.html"; 
             }
         }
+
 
         window.onload = requestPassword;
