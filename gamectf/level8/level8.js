@@ -25,7 +25,7 @@ function goToNextLevel() {
     window.location.href = "../level9/level9.html"; 
 }
 
-const correctPassword = "gdgusar{level8}";
+const correctPassword = "gdgusar{file_traversal_is_easy}";
 
 function requestPassword() {
     let enteredPassword = prompt("Enter the password to access Level :");
@@ -40,3 +40,4 @@ function requestPassword() {
 
 
 window.onload = requestPassword;
+
